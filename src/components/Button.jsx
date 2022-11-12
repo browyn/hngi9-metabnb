@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 const Button = styled.button`
   background: ${(props) =>
-    props.white ? props.theme.pallete.white : props.theme.pallete.purple};
+    props.white ? props.theme.palette.white : props.theme.palette.purple};
   color: ${(props) =>
-    props.white ? props.theme.pallete.purpleText : props.theme.pallete.white};
+    props.white ? props.theme.palette.purpleText : props.theme.palette.white};
   border-radius: ${(props) => props.theme.spacing(1.2)};
   min-width: 156px;
   height: 48px;

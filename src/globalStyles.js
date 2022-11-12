@@ -18,7 +18,6 @@ const GlobalStyles = createGlobalStyle`
     body {
         background: white;
         width: 100%;
-        padding: 24px 0;
         min-height: 100vh;
     }
 
@@ -31,11 +30,8 @@ const GlobalStyles = createGlobalStyle`
         }
     }
 
-    #root {
-        width: 100%;
-        max-width: 1240px;
-        padding: 0 24px;
-        margin: auto;
+    p {
+        line-height: 35px;
     }
 `;
 

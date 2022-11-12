@@ -1,5 +1,4 @@
 import React from "react";
-
 import styled from "styled-components";
 
 const List = styled.ul`
@@ -10,7 +9,7 @@ const List = styled.ul`
   li {
     a {
       font-size: 20px;
-      color: ${(props) => props.theme.pallete.black};
+      color: ${(props) => props.theme.palette.black};
     }
   }
 `;

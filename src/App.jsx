@@ -1,13 +1,16 @@
 import React from "react";
 
 import { ThemeProvider } from "styled-components";
+import Footer from "./components/Layout/Partials/Footer";
+import Header from "./components/Layout/Partials/Header";
 
 import GlobalStyles from "./globalStyles";
 
 const theme = {
-  pallete: {
+  palette: {
     black: "#000000",
-    dimBlack: "#434343",
+    dimBlack: "#1D1D1E",
+    textBlack: "#434343",
     white: "#FFFFFF",
     dimWhite: "#F7F7F7",
     grey: "#A3A3A3",
@@ -25,6 +28,8 @@ const App = () => {
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
+        <Header />
+        <Footer />
       </ThemeProvider>
     </>
   );
