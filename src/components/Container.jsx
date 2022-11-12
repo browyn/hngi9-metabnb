@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  width: calc(100% - 48px);
+  width: 100%;
   padding: ${(props) => props.theme.spacing(3)};
 `;
 

@@ -10,7 +10,7 @@ const GlobalStyles = createGlobalStyle`
         padding: 0;
         margin: 0;
         position: relative;
-        box-sizing: content-box;
+        box-sizing: border-box;
         font-family: 'Red Rose', cursive;
         font-weight: 400;
     }

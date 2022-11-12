@@ -1,8 +1,8 @@
 import React from "react";
 
 import { ThemeProvider } from "styled-components";
-import Footer from "./components/Layout/Partials/Footer";
-import Header from "./components/Layout/Partials/Header";
+import Hero from "./components/Home/Hero";
+import Layout from "./components/Layout/Layout";
 
 import GlobalStyles from "./globalStyles";
 
@@ -28,8 +28,9 @@ const App = () => {
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <Header />
-        <Footer />
+        <Layout>
+          <Hero />
+        </Layout>
       </ThemeProvider>
     </>
   );
