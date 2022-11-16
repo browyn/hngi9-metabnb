@@ -1,16 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 
+import { Link } from "react-router-dom";
+
 const NavBar = () => {
   return (
     <>
       <nav>
         <List>
           <li>
-            <a href="/">Home </a>
+            <Link to="/">Home </Link>
           </li>
           <li>
-            <a href="/">Place to stay </a>
+            <Link to="/place-to-stay">Place to stay </Link>
           </li>
           <li>
             <a href="/">NFTs </a>

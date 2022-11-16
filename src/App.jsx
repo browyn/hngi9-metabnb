@@ -6,6 +6,7 @@ import Layout from "./components/Layout/Layout";
 // import ConnectWallet from "./components/ConnectWallet";
 
 import HomePage from "./pages/HomePage";
+import MarketPlacePage from "./pages/MarketPlacePage";
 
 import GlobalStyles from "./globalStyles";
 
@@ -31,10 +32,15 @@ const App = () => {
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <Layout>
-          <HomePage />
-          {/* <ConnectWallet /> */}
-        </Layout>
+        <Router>
+          <Layout>
+            <Routes>
+              <Route exact path="/" element={<HomePage />} />
+              <Route path="/place-to-stay" element={<MarketPlacePage />} />
+            </Routes>
+            {/* <ConnectWallet /> */}
+          </Layout>
+        </Router>
       </ThemeProvider>
     </>
   );

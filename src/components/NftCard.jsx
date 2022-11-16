@@ -1,15 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-import nft1 from "../assets/images/nft-image-1.png";
 import star from "../assets/misc/star.svg";
 import heart from "../assets/misc/heart.svg";
 
-const NftCard = () => {
+const NftCard = (props) => {
     return (
         <NftCardContainer>
             <NftCardImage>
-                <img src={nft1} alt="" />
+                <img src={props.image} alt="" />
                 <img src={heart} alt="" />
             </NftCardImage>
             <NftCardDetails>

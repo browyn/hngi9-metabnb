@@ -1,18 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 
-import Title from "../Title";
 import Container from "../Container";
 import NftCard from "../NftCard";
+
+import list from "./data.js";
 
 const NftListMarket = () => {
     return (
         <NftListContainer>
-            <NftListTitle as="h2">
-                Inspiration for your next adventure
-            </NftListTitle>
             <NftListContent>
-                <NftCard />
+                {list.map((nft, index) => (
+                    <NftCard key={index} image={nft.img} />
+
+                ))}            
             </NftListContent>
         </NftListContainer>
     );
@@ -32,12 +33,7 @@ const NftListContainer = styled(Container)`
 
 const NftListContent = styled.div`
     display: flex;
-    gap: ${(props) => props.theme.spacing(2)};
+    gap: ${(props) => props.theme.spacing(3)};
     justify-content: center;
     flex-wrap: wrap;
-`;
-
-const NftListTitle = styled(Title)`
-    font-size: 48px;
-    color: ${props => props.theme.palette.black};
 `;
