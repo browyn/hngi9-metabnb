@@ -7,13 +7,13 @@ import Container from "./Container";
 import wolf from "../assets/misc/wolf.svg";
 import wallet from "../assets/misc/wallet.svg";
 
-const ConnectWallet = () => {
+const ConnectWallet = (props) => {
   return (
     <ModalContainer>
       <Modal>
         <ModalHeader>
           <ModalTitle>Connect Wallet</ModalTitle>
-          <span className="material-symbols-outlined">close</span>
+          <span className="material-symbols-outlined" onClick={props.showConnectWallet}>close</span>
         </ModalHeader>
         <hr />
         <ModalBody>

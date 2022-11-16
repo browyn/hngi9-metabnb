@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 
 import Layout from "./components/Layout/Layout";
-// import ConnectWallet from "./components/ConnectWallet";
 
 import HomePage from "./pages/HomePage";
 import MarketPlacePage from "./pages/MarketPlacePage";
@@ -38,7 +37,6 @@ const App = () => {
               <Route exact path="/" element={<HomePage />} />
               <Route path="/place-to-stay" element={<MarketPlacePage />} />
             </Routes>
-            {/* <ConnectWallet /> */}
           </Layout>
         </Router>
       </ThemeProvider>

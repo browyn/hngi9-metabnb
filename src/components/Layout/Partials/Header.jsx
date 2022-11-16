@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import gradientLogo from "../../../assets/metabnb-logos/metabnb-logo-gradient.svg";
 import Button from "../../Button";
 import NavBar from "./NavBar";
 import Container from "../../Container";
+import ConnectWallet from "../../ConnectWallet";
 
 const Header = () => {
+
+  const [show, setShow] = useState(false);
+
+  const showConnectWallet = () => {
+    setShow(!show);
+  };
+
   return (
     <>
       <header>
@@ -14,9 +22,10 @@ const Header = () => {
           <HeaderContent>
             <img src={gradientLogo} alt="MetaBNB gradient logo" />
             <NavBar />
-            <Button type="button">Connect Wallet</Button>
+            <Button type="button" onClick={showConnectWallet}>Connect Wallet</Button>
           </HeaderContent>
         </HeaderContainer>
+        {show && <ConnectWallet showConnectWallet={showConnectWallet} />}
       </header>
     </>
   );
