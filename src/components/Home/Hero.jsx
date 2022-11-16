@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Title from "../Title";
 import heroImage from "../../assets/images/hero-image.png";
 import Button from "../Button";
+import Container from "../Container";
 
 
 const Hero = () => {
@@ -34,13 +35,13 @@ const Hero = () => {
 export default Hero;
 
 
-const Article = styled.article`
+const Article = styled(Container)`
   display: flex;
   align-items: center;
   gap: ${(props) => props.theme.spacing(8)};
   max-width: 1240px;
   margin: auto;
-  padding: ${props => props.theme.spacing(6)} 0;
+  padding: ${props => props.theme.spacing(6)} ${props => props.theme.spacing(3)};
 `;
 
 const HeroText = styled.article`

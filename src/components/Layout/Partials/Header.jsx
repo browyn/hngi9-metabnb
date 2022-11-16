@@ -43,5 +43,6 @@ const HeaderContent = styled.div`
   justify-content: space-between;
   margin: auto;
   width: 100%;
+  padding: 0 ${props => props.theme.spacing(3)};
   max-width: 1240px;
 `;

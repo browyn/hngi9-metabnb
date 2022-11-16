@@ -76,6 +76,7 @@ const FooterContent = styled.div`
   margin: auto;
   max-width: 1240px;
 
+
   > div {
     display: flex;
     flex-direction: column;
