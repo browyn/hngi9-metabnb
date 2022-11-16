@@ -8,6 +8,56 @@ import twitter from "../../../assets/misc/twitter.svg";
 import Container from "../../Container";
 import Title from "../../Title";
 
+const Footer = () => {
+  return (
+    <>
+      <footer>
+        <FooterContainer>
+          <FooterContent>
+            <div>
+              <img src={footerLogo} alt="MetaBNB footer logo" />
+              <Social>
+                <img src={facebook} alt="" />
+                <img src={instagram} alt="" />
+                <img src={twitter} alt="" />
+              </Social>
+            </div>
+            <ListContainer>
+              <ListTitle as="h6">Community</ListTitle>
+              <List>
+                <li>NFTs</li>
+                <li>Tokens</li>
+                <li>Landlords</li>
+                <li>Discord</li>
+              </List>
+            </ListContainer>
+            <ListContainer>
+              <ListTitle as="h6">Places</ListTitle>
+              <List>
+                <li>Castle</li>
+                <li>Farms</li>
+                <li>Beach</li>
+                <li>Learn more</li>
+              </List>
+            </ListContainer>
+            <ListContainer>
+              <ListTitle as="h6">About us</ListTitle>
+              <List>
+                <li>Road map</li>
+                <li>Creators</li>
+                <li>Careers</li>
+                <li>Contact us</li>
+              </List>
+            </ListContainer>
+          </FooterContent>
+        </FooterContainer>
+      </footer>
+    </>
+  );
+};
+
+export default Footer;
+
 const FooterContainer = styled(Container)`
   background: ${(props) => props.theme.palette.dimBlack};
   padding: ${(props) => props.theme.spacing(6)}
@@ -62,53 +112,3 @@ const List = styled.ul`
     color: ${(props) => props.theme.palette.dimWhite};
   }
 `;
-
-const Footer = () => {
-  return (
-    <>
-      <footer>
-        <FooterContainer>
-          <FooterContent>
-            <div>
-              <img src={footerLogo} alt="MetaBNB footer logo" />
-              <Social>
-                <img src={facebook} alt="" />
-                <img src={instagram} alt="" />
-                <img src={twitter} alt="" />
-              </Social>
-            </div>
-            <ListContainer>
-              <ListTitle as="h6">Community</ListTitle>
-              <List>
-                <li>NFTs</li>
-                <li>Tokens</li>
-                <li>Landlords</li>
-                <li>Discord</li>
-              </List>
-            </ListContainer>
-            <ListContainer>
-              <ListTitle as="h6">Places</ListTitle>
-              <List>
-                <li>Castle</li>
-                <li>Farms</li>
-                <li>Beach</li>
-                <li>Learn more</li>
-              </List>
-            </ListContainer>
-            <ListContainer>
-              <ListTitle as="h6">About us</ListTitle>
-              <List>
-                <li>Road map</li>
-                <li>Creators</li>
-                <li>Careers</li>
-                <li>Contact us</li>
-              </List>
-            </ListContainer>
-          </FooterContent>
-        </FooterContainer>
-      </footer>
-    </>
-  );
-};
-
-export default Footer;

@@ -1,19 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-const List = styled.ul`
-  display: flex;
-  gap: ${(props) => props.theme.spacing(6)};
-  list-style: none;
-
-  li {
-    a {
-      font-size: 20px;
-      color: ${(props) => props.theme.palette.black};
-    }
-  }
-`;
-
 const NavBar = () => {
   return (
     <>
@@ -38,3 +25,16 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
+const List = styled.ul`
+  display: flex;
+  gap: ${(props) => props.theme.spacing(6)};
+  list-style: none;
+
+  li {
+    a {
+      font-size: 20px;
+      color: ${(props) => props.theme.palette.black};
+    }
+  }
+`;
