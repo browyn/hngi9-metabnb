@@ -5,10 +5,42 @@ import Title from "../Title";
 import heroImage from "../../assets/images/hero-image.png";
 import Button from "../Button";
 
+
+const Hero = () => {
+  return (
+    <>
+      <Article>
+        <HeroText>
+          <HeroTitle>
+            Rent a <Purple>Place</Purple> away from <Purple>Home</Purple> in the
+            <Purple> Metaverse</Purple>
+          </HeroTitle>
+          <p>
+            we provide you access to luxury and affordable houses in the
+            metaverse, get a chance to turn your imagination to reality at your
+            comfort zone
+          </p>
+          <InputGroup>
+            <Input type="text" placeholder="Search for location" />
+            <HeroButton>Search</HeroButton>
+          </InputGroup>
+        </HeroText>
+        <img src={heroImage} alt="Intro to MetaBNB" />
+      </Article>
+    </>
+  );
+};
+
+export default Hero;
+
+
 const Article = styled.article`
   display: flex;
   align-items: center;
   gap: ${(props) => props.theme.spacing(8)};
+  max-width: 1240px;
+  margin: auto;
+  padding: ${props => props.theme.spacing(6)} 0;
 `;
 
 const HeroText = styled.article`
@@ -25,6 +57,7 @@ const HeroText = styled.article`
 const HeroTitle = styled(Title)`
   font-weight: 400;
   line-height: 78px;
+  font-size: 56px;
   color: ${(props) => props.theme.palette.textBlack};
 `;
 
@@ -55,30 +88,3 @@ const HeroButton = styled(Button)`
   width: 230px;
   height: 54px;
 `;
-
-const Hero = () => {
-  return (
-    <>
-      <Article>
-        <HeroText>
-          <HeroTitle>
-            Rent a <Purple>Place</Purple> away from <Purple>Home</Purple> in the
-            <Purple> Metaverse</Purple>
-          </HeroTitle>
-          <p>
-            we provide you access to luxury and affordable houses in the
-            metaverse, get a chance to turn your imagination to reality at your
-            comfort zone
-          </p>
-          <InputGroup>
-            <Input type="text" placeholder="Search for location" />
-            <HeroButton>Search</HeroButton>
-          </InputGroup>
-        </HeroText>
-        <img src={heroImage} alt="Intro to MetaBNB" />
-      </Article>
-    </>
-  );
-};
-
-export default Hero;

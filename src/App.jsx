@@ -1,8 +1,11 @@
 import React from "react";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import Hero from "./components/Home/Hero";
+
 import Layout from "./components/Layout/Layout";
+// import ConnectWallet from "./components/ConnectWallet";
+
+import HomePage from "./pages/HomePage";
 
 import GlobalStyles from "./globalStyles";
 
@@ -14,7 +17,7 @@ const theme = {
     white: "#FFFFFF",
     dimWhite: "#F7F7F7",
     grey: "#A3A3A3",
-    dimGrey: "#D7D7D7D",
+    dimGrey: "#D7D7D7",
     purple: "linear-gradient(90deg, #A02279 11.45%, #A02279 11.46%)",
     purpleText: "#A02279",
   },
@@ -29,7 +32,8 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         <Layout>
-          <Hero />
+          <HomePage />
+          {/* <ConnectWallet /> */}
         </Layout>
       </ThemeProvider>
     </>
