@@ -61,7 +61,7 @@ const HeaderContent = styled.div`
   width: 100%;
   padding: 0 ${props => props.theme.spacing(3)};
   max-width: 1240px;
-  height: auto;
+  height: 80px;
   overflow: hidden;
 
   @media (max-width: 767px) {
