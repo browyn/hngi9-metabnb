@@ -45,7 +45,7 @@ const Article = styled(Container)`
   margin: auto;
   margin-top: 60px;
   overflow: hidden;
-  padding: ${props => props.theme.spacing(6)} 0;
+  padding: ${props => props.theme.spacing(6)} ${props => props.theme.spacing(3)};
 
   @media (max-width: 767px) {
     flex-direction: column-reverse;
