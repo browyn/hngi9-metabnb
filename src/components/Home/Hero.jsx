@@ -90,12 +90,13 @@ const InputGroup = styled.div`
 
 const Input = styled.input`
   border-radius: 8px 0 0 8px;
-  flex: 0 0 calc(70% - ${props => props.theme.spacing(2)});
+  flex: 0 0 70%;
   border: 1px solid ${props => props.theme.palette.grey};
   border-right: 0;
   outline: none;
   height: 54px;
   padding: 0 ${(props) => props.theme.spacing(2)};
+  min-width: 70%;
 
   &:placeholder {
     font-size: 14px;
@@ -106,12 +107,10 @@ const HeroButton = styled(Button)`
   border-radius: 0px 8px 8px 0px;
   height: 54px;
   flex: 0 0 30%;
-  min-width: initial;
-  
+  min-width: 30%;
 `;
 
 const HeroImage = styled.div`
-  // flex: 0 0 calc(40% - ${props => props.theme.spacing(4)});
 
     img {
       @media (max-width: 480px) {
