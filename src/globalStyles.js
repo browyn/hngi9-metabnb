@@ -19,6 +19,7 @@ const GlobalStyles = createGlobalStyle`
         background: white;
         width: 100%;
         min-height: 100vh;
+        overflow: hidden;
     }
 
     a {
