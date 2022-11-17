@@ -9,18 +9,6 @@ import nft8 from "./assets/images/nft-image-8.png";
 
 const list = [
     {
-        img: nft1
-    },
-    {
-        img: nft2
-    },
-    {
-        img: nft3
-    },
-    {
-        img: nft4
-    },
-    {
         img: nft5
     },
     {
@@ -31,6 +19,18 @@ const list = [
     },
     {
         img: nft8
+    },
+    {
+        img: nft1
+    },
+    {
+        img: nft2
+    },
+    {
+        img: nft3
+    },
+    {
+        img: nft4
     },
     
 ]

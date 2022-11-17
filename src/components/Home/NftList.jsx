@@ -32,6 +32,7 @@ const NftListContainer = styled(Container)`
     flex-direction: column;
     gap: ${props => props.theme.spacing(6)};
     align-items: center;
+    overflow: hidden;
 `;
 
 const NftListContent = styled.div`
@@ -39,6 +40,7 @@ const NftListContent = styled.div`
     gap: ${(props) => props.theme.spacing(2)};
     justify-content: center;
     flex-wrap: wrap;
+    overflow: hidden;
 `;
 
 const NftListTitle = styled(Title)`

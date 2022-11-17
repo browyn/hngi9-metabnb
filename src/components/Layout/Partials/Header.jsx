@@ -13,6 +13,11 @@ const Header = () => {
 
   const showConnectWallet = () => {
     setShow(!show);
+    if(document.body.style.overflow === "hidden"){
+      document.body.style.overflow = "initial";
+    } else {
+      document.body.style.overflow = "hidden"
+    }
   };
 
   return (
@@ -35,16 +40,17 @@ const Header = () => {
 export default Header;
 
 const HeaderCon = styled.header`
+  width: 100%;
   position: fixed;
   top: 0;
-  z-index: 2;
-  overflow: hidden;
-  width: 100%;
+  z-index: 1;
+  background: ${(props) => props.theme.palette.white};
 `;
 
 const HeaderContainer = styled(Container)` 
   padding: 0;
   background: ${(props) => props.theme.palette.white};
+  overflow: hidden;
 `;
 
 const HeaderContent = styled.div`
@@ -55,7 +61,8 @@ const HeaderContent = styled.div`
   width: 100%;
   padding: 0 ${props => props.theme.spacing(3)};
   max-width: 1240px;
-  height: 80px;
+  height: auto;
+  overflow: hidden;
 
   @media (max-width: 767px) {
     height: 60px;

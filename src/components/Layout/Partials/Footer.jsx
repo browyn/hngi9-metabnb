@@ -79,7 +79,7 @@ const FooterContent = styled.div`
   
   @media (max-width: 480px) {
     justify-content: initial;
-    gap: ${(props) => props.theme.spacing(4)};
+    gap: ${(props) => props.theme.spacing(3)};
     grid-template-columns: repeat(2, 50%);
   }
 

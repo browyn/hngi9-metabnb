@@ -44,7 +44,8 @@ const Article = styled(Container)`
   max-width: 1240px;
   margin: auto;
   margin-top: 60px;
-  padding: ${props => props.theme.spacing(6)} ${props => props.theme.spacing(3)};
+  overflow: hidden;
+  padding: ${props => props.theme.spacing(6)} 0;
 
   @media (max-width: 767px) {
     flex-direction: column-reverse;
@@ -82,8 +83,8 @@ const HeroTitle = styled(Title)`
   }
 
   @media (max-width: 480px) {
-    font-size: 40px;
-    line-height: 58px;
+    font-size: 38px;
+    line-height: 54px;
   }
 `;
 
@@ -95,6 +96,7 @@ const Purple = styled.span`
 const InputGroup = styled.div`
   display: flex;
   width: 100%;
+  overflow: hidden;
 `;
 
 const Input = styled.input`
@@ -124,6 +126,7 @@ const HeroImage = styled.div`
     img {
       @media (max-width: 480px) {
         width: 100%;
+        overflow: hidden;
       }
     }
 `;

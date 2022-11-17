@@ -24,7 +24,12 @@ export default Brands;
 const BrandsContainer = styled(Container)`
     background: ${props => props.theme.palette.purple};
     padding: 0;
-    min-height: 70px;
+    height: 70px;
+    overflow: hidden;
+
+    @media (max-width: 480px) {
+        height: auto;
+    }
 `;
 
 const BrandsContent = styled.div`
