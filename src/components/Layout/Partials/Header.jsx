@@ -6,17 +6,27 @@ import Button from "../../Button";
 import NavBar from "./NavBar";
 import Container from "../../Container";
 import ConnectWallet from "../../ConnectWallet";
+import MobileNav from "./MobileNav";
 
 const Header = () => {
-
   const [show, setShow] = useState(false);
+  const [mobileNav, setMobileNav] = useState(false);
 
   const showConnectWallet = () => {
     setShow(!show);
-    if(document.body.style.overflow === "hidden"){
+    if (document.body.style.overflow === "hidden") {
       document.body.style.overflow = "initial";
     } else {
-      document.body.style.overflow = "hidden"
+      document.body.style.overflow = "hidden";
+    }
+  };
+
+  const showMobileNav = () => {
+    setMobileNav(!mobileNav);
+    if (document.body.style.overflow === "hidden") {
+      document.body.style.overflow = "initial";
+    } else {
+      document.body.style.overflow = "hidden";
     }
   };
 
@@ -27,11 +37,18 @@ const Header = () => {
           <HeaderContent>
             <img src={gradientLogo} alt="MetaBNB gradient logo" />
             <NavBar />
-            <Button type="button" onClick={showConnectWallet}>Connect Wallet</Button>
-            <span className="material-symbols-outlined">menu</span>
+            <Button type="button" onClick={showConnectWallet}>
+              Connect Wallet
+            </Button>
+            <span className="material-symbols-outlined" onClick={showMobileNav}>
+              {mobileNav ? "close" : "menu"}
+            </span>
           </HeaderContent>
         </HeaderContainer>
         {show && <ConnectWallet showConnectWallet={showConnectWallet} />}
+        <div className={mobileNav ? "mobileNav show" : "mobileNav hide"}>
+          <MobileNav showConnectWallet={showConnectWallet} showMobileNav={showMobileNav} />
+        </div>
       </HeaderCon>
     </>
   );
@@ -45,9 +62,19 @@ const HeaderCon = styled.header`
   top: 0;
   z-index: 1;
   background: ${(props) => props.theme.palette.white};
+
+  .mobileNav.show {
+    transform: translateX(0px);
+    transition: ease 0.2s;
+  }
+
+  .mobileNav.hide {
+    transform: translateX(10000px);
+    transition: ease-in 0.5s;
+  }
 `;
 
-const HeaderContainer = styled(Container)` 
+const HeaderContainer = styled(Container)`
   padding: 0;
   background: ${(props) => props.theme.palette.white};
   overflow: hidden;
@@ -59,7 +86,7 @@ const HeaderContent = styled.div`
   justify-content: space-between;
   margin: auto;
   width: 100%;
-  padding: 0 ${props => props.theme.spacing(3)};
+  padding: 0 ${(props) => props.theme.spacing(3)};
   max-width: 1240px;
   height: 80px;
   overflow: hidden;
@@ -75,7 +102,7 @@ const HeaderContent = styled.div`
   }
 
   > span {
-    color: ${props => props.theme.palette.purpleText};
+    color: ${(props) => props.theme.palette.purpleText};
     font-size: 28px;
     display: none;
 
