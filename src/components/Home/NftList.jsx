@@ -5,6 +5,8 @@ import Title from "../Title";
 import Container from "../Container";
 import NftCard from "../NftCard";
 
+import list from "./data.js";
+
 const NftList = () => {
     return (
         <NftListContainer>
@@ -12,7 +14,9 @@ const NftList = () => {
                 Inspiration for your next adventure
             </NftListTitle>
             <NftListContent>
-                <NftCard />
+                {list.reverse().map((nft, index) => (
+                    <NftCard key={index} image={nft.img} />
+                ))}                
             </NftListContent>
         </NftListContainer>
     );
