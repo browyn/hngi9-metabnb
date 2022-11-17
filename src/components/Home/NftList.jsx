@@ -41,6 +41,10 @@ const NftListTitle = styled(Title)`
     font-size: 48px;
     color: ${props => props.theme.palette.black};
     text-align:center;
+
+    @media (max-width: 767px) {
+        font-size: 32px;
+    }
     
     @media (max-width: 480px) {
         font-size: 30px;

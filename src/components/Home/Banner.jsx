@@ -44,11 +44,16 @@ const Article = styled.article`
   margin: auto;
   padding: ${props => props.theme.spacing(6)} 0; 
 
-  @media (max-width: 480px) {
+  @media (max-width: 767px) {
     flex-direction: column-reverse;
   }
 
   > img {
+
+    @media (max-width: 767px) {
+      width: 70%;
+    }
+
     @media (max-width: 480px) {
       width: 100%;
     }
@@ -74,15 +79,20 @@ const BannerText = styled.article`
 
 const BannerTitle = styled(Title)`
   font-weight: 700;
-  font-weight: 48px;
+  font-size: 48px;
   line-height: 60px;
   color: ${(props) => props.theme.palette.dimWhite};
 
+  @media (max-width: 767px) {
+    font-size: 32px;
+    line-height: 52px;
+  }
   
   @media (max-width: 480px) {
     font-size: 28px;
     line-height: 44px;
   }
+
 `;
 
 const BannerButton = styled(Button)`

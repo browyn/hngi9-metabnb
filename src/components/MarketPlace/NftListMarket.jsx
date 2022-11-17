@@ -36,4 +36,5 @@ const NftListContent = styled.div`
     gap: ${(props) => props.theme.spacing(3)};
     justify-content: center;
     flex-wrap: wrap;
+    padding: 0 ${props => props.theme.spacing(3)};
 `;

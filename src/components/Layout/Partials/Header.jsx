@@ -40,7 +40,6 @@ const HeaderCon = styled.header`
   z-index: 2;
   overflow: hidden;
   width: 100%;
-
 `;
 
 const HeaderContainer = styled(Container)` 
@@ -58,12 +57,12 @@ const HeaderContent = styled.div`
   max-width: 1240px;
   height: 80px;
 
-  @media (max-width: 480px) {
+  @media (max-width: 767px) {
     height: 60px;
   }
 
   > img {
-    @media (max-width: 480px) {
+    @media (max-width: 767px) {
       max-width: 120px;
     }
   }
@@ -73,13 +72,13 @@ const HeaderContent = styled.div`
     font-size: 28px;
     display: none;
 
-    @media (max-width: 480px) {
+    @media (max-width: 767px) {
       display: block;
     }
   }
 
   > button {
-    @media (max-width: 480px) {
+    @media (max-width: 767px) {
       display: none;
     }
   }

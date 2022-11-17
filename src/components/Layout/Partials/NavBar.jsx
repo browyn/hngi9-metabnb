@@ -27,7 +27,7 @@ const NavBar = () => {
 export default NavBar;
 
 const Nav = styled.nav`
-  @media (max-width: 480px) {
+  @media (max-width: 767px) {
     display: none;
   }
 `;

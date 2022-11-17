@@ -35,7 +35,7 @@ const NftCard = (props) => {
 export default NftCard;
 
 const NftCardContainer = styled.div`
-    max-width: 292px;
+    width: 280px;
     border-radius: ${(props) => props.theme.spacing(2)};
     padding: ${(props) => props.theme.spacing(2)};
     border: 1px solid ${props => props.theme.palette.dimGrey};
@@ -45,6 +45,11 @@ const NftCardContainer = styled.div`
 `;
 
 const NftCardImage = styled.div`
+
+    img:nth-of-type(1) {
+        width: 100%;
+    }
+
     img:nth-of-type(2) {
         position: absolute;
         top: 8px;

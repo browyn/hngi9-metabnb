@@ -58,6 +58,7 @@ const ModalContainer = styled.div`
 
 const Modal = styled(Container)`
   max-width: 600px;
+  width: 90%;
   border-radius: ${(props) => props.theme.spacing(2)};
   padding: ${(props) => props.theme.spacing(1)} 0;
   background: ${props => props.theme.palette.white};

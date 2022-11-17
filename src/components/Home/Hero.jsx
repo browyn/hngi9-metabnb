@@ -46,7 +46,7 @@ const Article = styled(Container)`
   margin-top: 60px;
   padding: ${props => props.theme.spacing(6)} ${props => props.theme.spacing(3)};
 
-  @media (max-width: 480px) {
+  @media (max-width: 767px) {
     flex-direction: column-reverse;
   }
 `;
@@ -59,6 +59,10 @@ const HeroText = styled.article`
   p {
     font-size: 24px;
     color: ${(props) => props.theme.palette.textBlack};
+    
+    @media (max-width: 767px) {
+      font-size: 18px;
+    }
 
     @media (max-width: 480px) {
       font-size: 16px;
@@ -71,6 +75,11 @@ const HeroTitle = styled(Title)`
   line-height: 78px;
   font-size: 56px;
   color: ${(props) => props.theme.palette.textBlack};
+  
+  @media (max-width: 767px) {
+    font-size: 44px;
+    line-height: 60px;
+  }
 
   @media (max-width: 480px) {
     font-size: 40px;
