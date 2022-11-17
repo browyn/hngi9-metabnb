@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <>
-      <header>
+      <HeaderCon>
         <HeaderContainer>
           <HeaderContent>
             <img src={gradientLogo} alt="MetaBNB gradient logo" />
@@ -27,20 +27,25 @@ const Header = () => {
           </HeaderContent>
         </HeaderContainer>
         {show && <ConnectWallet showConnectWallet={showConnectWallet} />}
-      </header>
+      </HeaderCon>
     </>
   );
 };
 
 export default Header;
 
-const HeaderContainer = styled(Container)` 
-  padding: 0;
-  background: ${(props) => props.theme.palette.white};
+const HeaderCon = styled.header`
   position: fixed;
   top: 0;
   z-index: 2;
   overflow: hidden;
+  width: 100%;
+
+`;
+
+const HeaderContainer = styled(Container)` 
+  padding: 0;
+  background: ${(props) => props.theme.palette.white};
 `;
 
 const HeaderContent = styled.div`
@@ -49,7 +54,7 @@ const HeaderContent = styled.div`
   justify-content: space-between;
   margin: auto;
   width: 100%;
-  padding: 0 ${props => props.theme.spacing(2)};
+  padding: 0 ${props => props.theme.spacing(3)};
   max-width: 1240px;
   height: 80px;
 

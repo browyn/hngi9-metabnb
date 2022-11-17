@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <>
       <Nav>
         <List>
           <li>
@@ -22,7 +21,6 @@ const NavBar = () => {
           </li>
         </List>
       </Nav>
-    </>
   );
 };
 
