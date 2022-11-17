@@ -34,12 +34,13 @@ const Header = () => {
 
 export default Header;
 
-const HeaderContainer = styled(Container)`
-  padding: ${props => props.theme.spacing(3)} 0; 
+const HeaderContainer = styled(Container)` 
+  padding: 0;
   background: ${(props) => props.theme.palette.white};
   position: fixed;
   top: 0;
   z-index: 2;
+  overflow: hidden;
 `;
 
 const HeaderContent = styled.div`
@@ -50,6 +51,11 @@ const HeaderContent = styled.div`
   width: 100%;
   padding: 0 ${props => props.theme.spacing(2)};
   max-width: 1240px;
+  height: 80px;
+
+  @media (max-width: 480px) {
+    height: 60px;
+  }
 
   > img {
     @media (max-width: 480px) {

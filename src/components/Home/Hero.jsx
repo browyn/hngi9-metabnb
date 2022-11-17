@@ -55,7 +55,6 @@ const HeroText = styled.article`
   display: flex;
   flex-direction: column;
   gap: ${(props) => props.theme.spacing(4)};
-  // flex: 0 0 calc(60% - ${props => props.theme.spacing(4)});
 
   p {
     font-size: 24px;
@@ -91,7 +90,7 @@ const InputGroup = styled.div`
 
 const Input = styled.input`
   border-radius: 8px 0 0 8px;
-  flex: 0 0 70%;
+  flex: 0 0 calc(70% - ${props => props.theme.spacing(2)});
   border: 1px solid ${props => props.theme.palette.grey};
   border-right: 0;
   outline: none;
