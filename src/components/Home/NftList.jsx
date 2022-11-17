@@ -14,7 +14,7 @@ const NftList = () => {
                 Inspiration for your next adventure
             </NftListTitle>
             <NftListContent>
-                {list.reverse().map((nft, index) => (
+                {list.map((nft, index) => (
                     <NftCard key={index} image={nft.img} />
                 ))}                
             </NftListContent>
