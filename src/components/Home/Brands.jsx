@@ -24,7 +24,7 @@ export default Brands;
 const BrandsContainer = styled(Container)`
     background: ${props => props.theme.palette.purple};
     padding: 0;
-    height: 70px;
+    min-height: 70px;
 `;
 
 const BrandsContent = styled.div`
@@ -35,4 +35,10 @@ const BrandsContent = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+        gap: ${props => props.theme.spacing(6)};
+        padding: ${props => props.theme.spacing(6)} 0;
+    }
 `;

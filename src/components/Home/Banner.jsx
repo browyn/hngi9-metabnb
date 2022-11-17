@@ -42,7 +42,17 @@ const Article = styled.article`
   gap: ${(props) => props.theme.spacing(8)};
   max-width: 1240px;
   margin: auto;
-  padding: ${props => props.theme.spacing(6)} 0;
+  padding: ${props => props.theme.spacing(6)} 0; 
+
+  @media (max-width: 480px) {
+    flex-direction: column-reverse;
+  }
+
+  > img {
+    @media (max-width: 480px) {
+      width: 100%;
+    }
+  }
 `;
 
 const BannerText = styled.article`
@@ -54,6 +64,11 @@ const BannerText = styled.article`
     font-size: 18px;
     line-height: 35px;
     color: ${(props) => props.theme.palette.dimWhite};
+
+    
+    @media (max-width: 480px) {
+      font-size: 16px;
+    }
   }
 `;
 
@@ -62,6 +77,12 @@ const BannerTitle = styled(Title)`
   font-weight: 48px;
   line-height: 60px;
   color: ${(props) => props.theme.palette.dimWhite};
+
+  
+  @media (max-width: 480px) {
+    font-size: 28px;
+    line-height: 44px;
+  }
 `;
 
 const BannerButton = styled(Button)`

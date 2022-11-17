@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <>
-      <nav>
+      <Nav>
         <List>
           <li>
             <Link to="/">Home </Link>
@@ -21,12 +21,18 @@ const NavBar = () => {
             <a href="/">Community </a>
           </li>
         </List>
-      </nav>
+      </Nav>
     </>
   );
 };
 
 export default NavBar;
+
+const Nav = styled.nav`
+  @media (max-width: 480px) {
+    display: none;
+  }
+`;
 
 const List = styled.ul`
   display: flex;

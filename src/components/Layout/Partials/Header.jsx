@@ -23,6 +23,7 @@ const Header = () => {
             <img src={gradientLogo} alt="MetaBNB gradient logo" />
             <NavBar />
             <Button type="button" onClick={showConnectWallet}>Connect Wallet</Button>
+            <span className="material-symbols-outlined">menu</span>
           </HeaderContent>
         </HeaderContainer>
         {show && <ConnectWallet showConnectWallet={showConnectWallet} />}
@@ -34,7 +35,11 @@ const Header = () => {
 export default Header;
 
 const HeaderContainer = styled(Container)`
+  padding: ${props => props.theme.spacing(3)} 0; 
   background: ${(props) => props.theme.palette.white};
+  position: fixed;
+  top: 0;
+  z-index: 2;
 `;
 
 const HeaderContent = styled.div`
@@ -43,6 +48,28 @@ const HeaderContent = styled.div`
   justify-content: space-between;
   margin: auto;
   width: 100%;
-  padding: 0 ${props => props.theme.spacing(3)};
+  padding: 0 ${props => props.theme.spacing(2)};
   max-width: 1240px;
+
+  > img {
+    @media (max-width: 480px) {
+      max-width: 120px;
+    }
+  }
+
+  > span {
+    color: ${props => props.theme.palette.purpleText};
+    font-size: 28px;
+    display: none;
+
+    @media (max-width: 480px) {
+      display: block;
+    }
+  }
+
+  > button {
+    @media (max-width: 480px) {
+      display: none;
+    }
+  }
 `;

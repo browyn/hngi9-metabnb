@@ -76,6 +76,13 @@ const FooterContent = styled.div`
   margin: auto;
   max-width: 1240px;
 
+  
+  @media (max-width: 480px) {
+    justify-content: initial;
+    gap: ${(props) => props.theme.spacing(4)};
+    grid-template-columns: repeat(2, 50%);
+  }
+
 
   > div {
     display: flex;
@@ -99,6 +106,10 @@ const ListContainer = styled.div`
   flex-direction: column;
   gap: ${(props) => props.theme.spacing(3)};
   justify-self: center;
+
+  @media (max-width: 480px) {
+    justify-self: initial;  
+  }
 `;
 
 const ListTitle = styled(Title)`
