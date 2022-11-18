@@ -4,8 +4,7 @@ import { ThemeProvider } from "styled-components";
 
 import Layout from "./components/Layout/Layout";
 
-import HomePage from "./pages/HomePage";
-import MarketPlacePage from "./pages/MarketPlacePage";
+import { HomePage, MarketPlacePage } from "./pages";
 
 import GlobalStyles from "./globalStyles";
 
