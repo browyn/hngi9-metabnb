@@ -13,26 +13,31 @@ const ConnectWallet = (props) => {
       <Modal>
         <ModalHeader>
           <ModalTitle>Connect Wallet</ModalTitle>
-          <span className="material-symbols-outlined" onClick={props.showConnectWallet}>close</span>
+          <span
+            className="material-symbols-outlined"
+            onClick={props.showConnectWallet}
+          >
+            close
+          </span>
         </ModalHeader>
         <hr />
         <ModalBody>
-        <span>Choose your preferred wallet:</span>
-        <WalletOption>
+          <span>Choose your preferred wallet:</span>
+          <WalletOption>
             <div>
-                <img src={wolf} alt="Metamask wallet" />
-                <span>Metamask</span>
+              <img src={wolf} alt="Metamask wallet" />
+              <span>Metamask</span>
             </div>
             <span className="material-symbols-outlined">chevron_right</span>
-        </WalletOption>
+          </WalletOption>
 
-        <WalletOption>
+          <WalletOption>
             <div>
-                <img src={wallet} alt="Metamask wallet" />
-                <span>Metamask</span>
+              <img src={wallet} alt="Metamask wallet" />
+              <span>Metamask</span>
             </div>
             <span className="material-symbols-outlined">chevron_right</span>
-        </WalletOption>
+          </WalletOption>
         </ModalBody>
       </Modal>
     </ModalContainer>
@@ -61,25 +66,26 @@ const Modal = styled(Container)`
   width: 90%;
   border-radius: ${(props) => props.theme.spacing(2)};
   padding: ${(props) => props.theme.spacing(1)} 0;
-  background: ${props => props.theme.palette.white};
+  background: ${(props) => props.theme.palette.white};
 
   hr {
     width: 100%;
     height: 1px;
-    background: #CFD8DC;
+    background: #cfd8dc;
     border: none;
   }
 `;
 
 const ModalHeader = styled.div`
   width: 100%;
-  padding: ${(props) => props.theme.spacing(3)} ${(props) => props.theme.spacing(4)};
+  padding: ${(props) => props.theme.spacing(3)}
+    ${(props) => props.theme.spacing(4)};
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   span {
-    font-size: 24px; 
+    font-size: 24px;
   }
 `;
 
@@ -89,41 +95,40 @@ const ModalTitle = styled(Title)`
   font-weight: 700px;
 `;
 
-
 const ModalBody = styled.div`
-    width: 100%;
-    padding: ${(props) => props.theme.spacing(4)};
-    display: flex;
-    flex-direction: column;
-    gap: ${(props) => props.theme.spacing(2)};
+  width: 100%;
+  padding: ${(props) => props.theme.spacing(4)};
+  display: flex;
+  flex-direction: column;
+  gap: ${(props) => props.theme.spacing(2)};
 
-    span {
-        font-size: 16px;
-    }
+  span {
+    font-size: 16px;
+  }
 `;
 
 const WalletOption = styled.div`
-    border: 1px solid #CFD8DC;
-    border-radius: ${props => props.theme.spacing(1.5)};
-    padding: ${props => props.theme.spacing(2)};
-    background: #F8F9FA;
+  border: 1px solid #cfd8dc;
+  border-radius: ${(props) => props.theme.spacing(1.5)};
+  padding: ${(props) => props.theme.spacing(2)};
+  background: #f8f9fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  > span {
+    color: #959da6;
+    font-size: 24px;
+  }
+
+  div {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: ${(props) => props.theme.spacing(2.5)};
 
-    > span {
-        color: #959DA6;
-        font-size: 24px;
+    span {
+      font-weight: 700;
+      font-size: 18px;
     }
-
-    div {
-        display: flex;
-        align-items: center;
-        gap: ${props => props.theme.spacing(2.5)};
-
-        span {
-            font-weight: 700;
-            font-size: 18px;
-        }
-    }
+  }
 `;

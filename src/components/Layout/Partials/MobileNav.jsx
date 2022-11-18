@@ -23,7 +23,9 @@ const MobileNav = ({ showConnectWallet, showMobileNav }) => {
             <a href="/">Community </a>
           </li>
         </MobileNavList>
-        <Button type="button" onClick={showConnectWallet}>Connect Wallet</Button>
+        <Button type="button" onClick={showConnectWallet}>
+          Connect Wallet
+        </Button>
       </MobileNavContent>
     </MobileNavContainer>
   );

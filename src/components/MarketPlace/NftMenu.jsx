@@ -112,7 +112,7 @@ const NftMenuContainer = styled.div`
   max-width: 1240px;
   margin: auto;
   margin-top: 100px;
-  padding: 0 ${(props) => props.theme.spacing(3)}
+  padding: 0 ${(props) => props.theme.spacing(3)};
 `;
 
 const NftMenuContent = styled.div`

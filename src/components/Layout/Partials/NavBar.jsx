@@ -5,22 +5,22 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-      <Nav>
-        <List>
-          <li>
-            <Link to="/">Home </Link>
-          </li>
-          <li>
-            <Link to="/place-to-stay">Place to stay </Link>
-          </li>
-          <li>
-            <a href="/">NFTs </a>
-          </li>
-          <li>
-            <a href="/">Community </a>
-          </li>
-        </List>
-      </Nav>
+    <Nav>
+      <List>
+        <li>
+          <Link to="/">Home </Link>
+        </li>
+        <li>
+          <Link to="/place-to-stay">Place to stay </Link>
+        </li>
+        <li>
+          <a href="/">NFTs </a>
+        </li>
+        <li>
+          <a href="/">Community </a>
+        </li>
+      </List>
+    </Nav>
   );
 };
 

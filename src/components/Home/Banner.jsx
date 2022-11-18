@@ -58,7 +58,6 @@ const BannerText = styled.article`
     width: 45%;
   }
 
-  
   @media (max-width: 767px) {
     width: initial;
   }

@@ -50,10 +50,7 @@ const Footer = () => {
               </List>
             </ListContainer>
           </FooterContent>
-          <FooterAttribution>
-            &copy; 2022 Metabnb
-          </FooterAttribution>
-
+          <FooterAttribution>&copy; 2022 Metabnb</FooterAttribution>
         </FooterContainer>
       </footer>
     </>
@@ -76,13 +73,11 @@ const FooterContent = styled.div`
   margin: auto;
   max-width: 1240px;
 
-  
   @media (max-width: 480px) {
     justify-content: initial;
     gap: ${(props) => props.theme.spacing(3)};
     grid-template-columns: repeat(2, 50%);
   }
-
 
   > div {
     display: flex;
@@ -108,7 +103,7 @@ const ListContainer = styled.div`
   justify-self: center;
 
   @media (max-width: 480px) {
-    justify-self: initial;  
+    justify-self: initial;
   }
 `;
 
@@ -135,4 +130,4 @@ const FooterAttribution = styled.div`
   margin: auto;
   padding-top: ${(props) => props.theme.spacing(6)};
   color: ${(props) => props.theme.palette.dimWhite};
-`
+`;

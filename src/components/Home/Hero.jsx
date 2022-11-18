@@ -61,7 +61,6 @@ const HeroText = styled.article`
     width: 55%;
   }
 
-  
   @media (max-width: 767px) {
     width: initial;
   }
