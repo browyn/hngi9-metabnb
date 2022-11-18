@@ -78,6 +78,7 @@ const HeaderContainer = styled(Container)`
   padding: 0;
   background: ${(props) => props.theme.palette.white};
   overflow: hidden;
+  padding: 0 ${(props) => props.theme.spacing(3)};
 `;
 
 const HeaderContent = styled.div`
@@ -86,7 +87,6 @@ const HeaderContent = styled.div`
   justify-content: space-between;
   margin: auto;
   width: 100%;
-  padding: 0 ${(props) => props.theme.spacing(3)};
   max-width: 1240px;
   height: 80px;
   overflow: hidden;

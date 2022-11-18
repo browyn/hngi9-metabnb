@@ -23,8 +23,6 @@ const NftList = () => {
 export default NftList;
 
 const NftListContainer = styled(Container)`
-  max-width: 1240px;
-  margin: auto;
   padding: ${(props) => props.theme.spacing(6)}
     ${(props) => props.theme.spacing(3)};
   display: flex;
@@ -36,10 +34,12 @@ const NftListContainer = styled(Container)`
 
 const NftListContent = styled.div`
   display: flex;
-  gap: ${(props) => props.theme.spacing(2)};
+  gap: ${(props) => props.theme.spacing(3)};
   justify-content: center;
   flex-wrap: wrap;
   overflow: hidden;
+  max-width: 1240px;
+  margin: auto;
 `;
 
 const NftListTitle = styled(Title)`

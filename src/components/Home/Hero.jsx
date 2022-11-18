@@ -8,7 +8,7 @@ import Container from "../Container";
 
 const Hero = () => {
   return (
-    <>
+    <HeroContainer>
       <Article>
         <HeroText>
           <HeroTitle>
@@ -29,11 +29,16 @@ const Hero = () => {
           <img src={heroImage} alt="Intro to MetaBNB" />
         </HeroImage>
       </Article>
-    </>
+    </HeroContainer>
   );
 };
 
 export default Hero;
+
+const HeroContainer = styled(Container)`
+  padding: ${(props) => props.theme.spacing(6)}
+    ${(props) => props.theme.spacing(3)};
+`;
 
 const Article = styled(Container)`
   display: flex;
@@ -44,9 +49,7 @@ const Article = styled(Container)`
   margin: auto;
   margin-top: 60px;
   overflow: hidden;
-  padding: ${(props) => props.theme.spacing(6)}
-    ${(props) => props.theme.spacing(3)};
-
+  padding: 0;
   @media (max-width: 767px) {
     flex-direction: column-reverse;
   }
