@@ -60,7 +60,7 @@ const HeroText = styled.article`
   flex-direction: column;
   gap: ${(props) => props.theme.spacing(4)};
 
-  @media (max-width: 1023px) {
+  @media (max-width: 1200px) {
     width: 55%;
   }
 
@@ -72,7 +72,7 @@ const HeroText = styled.article`
     font-size: 24px;
     color: ${(props) => props.theme.palette.textBlack};
 
-    @media (max-width: 1023px) {
+    @media (max-width: 1200px) {
       font-size: 18px;
     }
 
@@ -88,7 +88,7 @@ const HeroTitle = styled(Title)`
   font-size: 56px;
   color: ${(props) => props.theme.palette.textBlack};
 
-  @media (max-width: 1023px) {
+  @media (max-width: 1200px) {
     font-size: 44px;
     line-height: 60px;
   }
@@ -136,12 +136,12 @@ const HeroImage = styled.div`
   display: flex;
   justify-content: center;
 
-  @media (max-width: 1023px) {
+  @media (max-width: 1200px) {
     flex: 0 0 45%;
   }
 
   img {
-    @media (max-width: 1023px) {
+    @media (max-width: 1200px) {
       width: 100%;
     }
 

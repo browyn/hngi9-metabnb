@@ -53,7 +53,7 @@ const BannerText = styled.article`
   flex-direction: column;
   gap: ${(props) => props.theme.spacing(4)};
 
-  @media (max-width: 1023px) {
+  @media (max-width: 1200px) {
     font-size: 16px;
     width: 45%;
   }
@@ -67,7 +67,7 @@ const BannerText = styled.article`
     line-height: 35px;
     color: ${(props) => props.theme.palette.dimWhite};
 
-    @media (max-width: 1023px) {
+    @media (max-width: 1200px) {
       font-size: 16px;
     }
 
@@ -83,7 +83,7 @@ const BannerTitle = styled(Title)`
   line-height: 60px;
   color: ${(props) => props.theme.palette.dimWhite};
 
-  @media (max-width: 1023px) {
+  @media (max-width: 1200px) {
     font-size: 32px;
     line-height: 52px;
   }
@@ -101,11 +101,11 @@ const BannerButton = styled(Button)`
 const BannerImage = styled.div`
   display: flex;
   justify-content: center;
-  @media (max-width: 1023px) {
+  @media (max-width: 1200px) {
     flex: 0 0 55%;
   }
   img {
-    @media (max-width: 1023px) {
+    @media (max-width: 1200px) {
       width: 100%;
     }
 
