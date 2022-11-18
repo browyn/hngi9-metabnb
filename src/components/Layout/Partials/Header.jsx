@@ -96,7 +96,7 @@ const HeaderContent = styled.div`
   }
 
   > img {
-    @media (max-width: 767px) {
+    @media (max-width: 1023px) {
       max-width: 120px;
     }
   }

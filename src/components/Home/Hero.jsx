@@ -6,7 +6,6 @@ import heroImage from "../../assets/images/hero-image.png";
 import Button from "../Button";
 import Container from "../Container";
 
-
 const Hero = () => {
   return (
     <>
@@ -28,8 +27,8 @@ const Hero = () => {
         </HeroText>
         <HeroImage>
           <img src={heroImage} alt="Intro to MetaBNB" />
-        </HeroImage>      
-        </Article>
+        </HeroImage>
+      </Article>
     </>
   );
 };
@@ -45,7 +44,8 @@ const Article = styled(Container)`
   margin: auto;
   margin-top: 60px;
   overflow: hidden;
-  padding: ${props => props.theme.spacing(6)} ${props => props.theme.spacing(3)};
+  padding: ${(props) => props.theme.spacing(6)}
+    ${(props) => props.theme.spacing(3)};
 
   @media (max-width: 767px) {
     flex-direction: column-reverse;
@@ -57,11 +57,20 @@ const HeroText = styled.article`
   flex-direction: column;
   gap: ${(props) => props.theme.spacing(4)};
 
+  @media (max-width: 1023px) {
+    width: 55%;
+  }
+
+  
+  @media (max-width: 767px) {
+    width: initial;
+  }
+
   p {
     font-size: 24px;
     color: ${(props) => props.theme.palette.textBlack};
-    
-    @media (max-width: 767px) {
+
+    @media (max-width: 1023px) {
       font-size: 18px;
     }
 
@@ -76,8 +85,8 @@ const HeroTitle = styled(Title)`
   line-height: 78px;
   font-size: 56px;
   color: ${(props) => props.theme.palette.textBlack};
-  
-  @media (max-width: 767px) {
+
+  @media (max-width: 1023px) {
     font-size: 44px;
     line-height: 60px;
   }
@@ -102,7 +111,7 @@ const InputGroup = styled.div`
 const Input = styled.input`
   border-radius: 8px 0 0 8px;
   flex: 0 0 70%;
-  border: 1px solid ${props => props.theme.palette.grey};
+  border: 1px solid ${(props) => props.theme.palette.grey};
   border-right: 0;
   outline: none;
   height: 54px;
@@ -122,11 +131,24 @@ const HeroButton = styled(Button)`
 `;
 
 const HeroImage = styled.div`
+  display: flex;
+  justify-content: center;
 
-    img {
-      @media (max-width: 480px) {
-        width: 100%;
-        overflow: hidden;
-      }
+  @media (max-width: 1023px) {
+    flex: 0 0 45%;
+  }
+
+  img {
+    @media (max-width: 1023px) {
+      width: 100%;
     }
+
+    @media (max-width: 767px) {
+      width: 70%;
+    }
+
+    @media (max-width: 480px) {
+      width: 100%;
+    }
+  }
 `;

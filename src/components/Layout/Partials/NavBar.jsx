@@ -37,6 +37,10 @@ const List = styled.ul`
   gap: ${(props) => props.theme.spacing(6)};
   list-style: none;
 
+  @media (max-width: 1023px) {
+    gap: ${(props) => props.theme.spacing(3)};
+  }
+
   li {
     a {
       font-size: 20px;
